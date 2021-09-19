@@ -1,14 +1,33 @@
-//
-//  main.cpp
-//  18
-//
-//  Created by Илья Грицацуев on 20.09.2021.
-//
+#include "LfuCache.hpp"
 
-#include <iostream>
+int main()
+{
+    LfuCache a(4);
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    a.find_and_add("AA");
+    a.find_and_add("HH");
+    a.find_and_add("CC");
+
+    cout<<a;
+    cout<<endl;
+
+    a.find_and_add("AA");
+    a.find_and_add("AA");
+    a.find_and_add("CC");
+    
+    cout<<a;
+    
+    cout<<"\n";
+    a.find_and_add("BB");
+    a.find_and_add("BC");
+    
+    cout<<a;
+    
+    
+    cout<<endl;
+
+
+
     return 0;
 }
+
