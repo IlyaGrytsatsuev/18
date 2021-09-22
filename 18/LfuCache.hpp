@@ -19,7 +19,6 @@ class LfuCache
 private:
     size_t size;
     size_t count;
-    size_t min;
     map <string, int> My_map ;
     multimap <int,string> My_mmap;
 public:

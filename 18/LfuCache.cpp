@@ -62,7 +62,6 @@ using namespace std;
             {
                 My_map.insert (pair<string,int>(address, 1));
                 My_mmap.insert(pair<int,string>(1,address));
-                min = 1;
                 count++;
             }
             else
@@ -80,7 +79,6 @@ using namespace std;
             del(address,My_map[address]);
             My_map[address] += 1;
             My_mmap.insert(pair<int,string>(My_map[address], address));
-           // min = find_minimum();
         }
         return true;
     }
